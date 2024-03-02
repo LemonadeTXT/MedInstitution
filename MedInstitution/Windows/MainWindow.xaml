@@ -1,0 +1,28 @@
+﻿<Window x:Class="MedInstitution.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MedInstitution.Windows"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"
+        Title="Medical Institution" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" Grid.Row="0" Content="Employees" Width="100" VerticalAlignment="Center" Click="Button_Employees"/>
+        <Button Grid.Column="0" Grid.Row="1" Content="Medicines" Width="100" VerticalAlignment="Center"/>
+        <Button Grid.Column="0" Grid.Row="2" Content="Patients" Width="100" VerticalAlignment="Center"/>
+        <Button Grid.Column="0" Grid.Row="3" Content="Institution" Width="100" VerticalAlignment="Center"/>
+        <Frame Grid.Column="1" Grid.Row="0" Grid.RowSpan="4" x:Name="frame"></Frame>
+    </Grid>
+</Window>

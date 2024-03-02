@@ -13,11 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MedInstitution
+namespace MedInstitution.Pages
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Interaction logic for MedicinesPage.xaml
+    /// </summary>
+    public partial class MedicinesPage : Page
     {
-        public MainWindow()
+        public MedicinesPage()
         {
             InitializeComponent();
         }
