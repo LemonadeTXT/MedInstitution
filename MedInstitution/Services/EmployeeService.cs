@@ -1,10 +1,7 @@
 ﻿using MedInstitution.DAL;
 using MedInstitution.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MedInstitution.Services
 {
@@ -20,6 +17,24 @@ namespace MedInstitution.Services
         public List<Employee> GetAllEmployees()
         {
             return _dataContext.Employees.ToList();
+        }
+
+        public void AddEmployee(Employee employee)
+        {
+            _dataContext.Employees.Add(employee);
+            _dataContext.SaveChanges();
+        }
+
+        public void EditEmployee(Employee employee)
+        {
+            _dataContext.Employees.Update(employee);
+            _dataContext.SaveChanges();
+        }
+
+        public void DeleteEmployees(List<Employee> employees)
+        {
+            _dataContext.Employees.RemoveRange(employees);
+            _dataContext.SaveChanges();
         }
     }
 }

@@ -23,6 +23,6 @@
         <Button Grid.Column="0" Grid.Row="1" Content="Medicines" Width="100" VerticalAlignment="Center"/>
         <Button Grid.Column="0" Grid.Row="2" Content="Patients" Width="100" VerticalAlignment="Center"/>
         <Button Grid.Column="0" Grid.Row="3" Content="Institution" Width="100" VerticalAlignment="Center"/>
-        <Frame Grid.Column="1" Grid.Row="0" Grid.RowSpan="4" x:Name="frame"></Frame>
+        <Frame Grid.Column="1" Grid.Row="0" Grid.RowSpan="4" x:Name="frame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
