@@ -22,12 +22,12 @@ namespace MedInstitution.Windows
 
         private void Button_Patients(object sender, RoutedEventArgs e)
         {
-
+            frame.Navigate(new PatientsPage());
         }
 
         private void Button_Institution(object sender, RoutedEventArgs e)
         {
-
+            frame.Navigate(new InstitutionPage());
         }
     }
 }
