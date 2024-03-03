@@ -1,12 +1,17 @@
-﻿using MedInstitution.Pages;
+﻿using MedInstitution.Models;
+using MedInstitution.Pages;
 using System.Windows;
 
 namespace MedInstitution.Windows
 {
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly Institution _institution;
+
+        public MainWindow(Institution institution)
         {
+            _institution = institution;
+
             InitializeComponent();
         }
 
@@ -27,7 +32,7 @@ namespace MedInstitution.Windows
 
         private void Button_Institution(object sender, RoutedEventArgs e)
         {
-            frame.Navigate(new InstitutionPage());
+            frame.Navigate(new InstitutionPage(_institution));
         }
     }
 }

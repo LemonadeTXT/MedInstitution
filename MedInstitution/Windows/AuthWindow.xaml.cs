@@ -28,7 +28,7 @@ namespace MedInstitution
 
             if (auth)
             {
-                new MainWindow().Show();
+                new MainWindow(institution).Show();
 
                 Close();
             }

@@ -1,28 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using MedInstitution.Models;
+using MedInstitution.Services;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace MedInstitution.Pages
 {
-    /// <summary>
-    /// Interaction logic for InstitutionPage.xaml
-    /// </summary>
     public partial class InstitutionPage : Page
     {
-        public InstitutionPage()
+        private readonly InstitutionService _institutionService;
+
+        public InstitutionPage(Institution institution)
         {
+            _institutionService = new InstitutionService();
+
             InitializeComponent();
+
+            var currentinstitution = _institutionService.GetCurrentInstitution(institution);
+
+            labelLogin.Content = currentinstitution.Login;
+            labelPassword.Content = currentinstitution.Password;
+            labelAddress.Content = currentinstitution.Address;
+            labelEmail.Content = currentinstitution.Email;
         }
     }
 }

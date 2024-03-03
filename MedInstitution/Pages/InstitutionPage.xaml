@@ -5,10 +5,22 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:MedInstitution.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="InstitutionPage">
+      d:DesignHeight="450" d:DesignWidth="434.04"
+      Title="InstitutionPage"
+      Background="White">
 
     <Grid>
-        
+        <StackPanel Width="70" HorizontalAlignment="Left">
+            <Label>Login:</Label>
+            <Label>Password:</Label>
+            <Label>Address:</Label>
+            <Label>Email:</Label>
+        </StackPanel>
+        <StackPanel Width="100" HorizontalAlignment="Left" Margin="70,0,0,0">
+            <Label x:Name="labelLogin"></Label>
+            <Label x:Name="labelPassword"></Label>
+            <Label x:Name="labelAddress"></Label>
+            <Label x:Name="labelEmail"></Label>
+        </StackPanel>
     </Grid>
 </Page>

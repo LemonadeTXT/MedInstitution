@@ -19,5 +19,10 @@ namespace MedInstitution.Services
 
             return findInstitution;
         }
+
+        public Institution GetCurrentInstitution(Institution institution)
+        {
+            return _dataContext.Institutions.FirstOrDefault(i => i.Login == institution.Login && i.Password == institution.Password);
+        }
     }
 }
