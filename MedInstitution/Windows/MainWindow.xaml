@@ -20,9 +20,9 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Button Grid.Column="0" Grid.Row="0" Content="Employees" Width="100" VerticalAlignment="Center" Click="Button_Employees"/>
-        <Button Grid.Column="0" Grid.Row="1" Content="Medicines" Width="100" VerticalAlignment="Center"/>
-        <Button Grid.Column="0" Grid.Row="2" Content="Patients" Width="100" VerticalAlignment="Center"/>
-        <Button Grid.Column="0" Grid.Row="3" Content="Institution" Width="100" VerticalAlignment="Center"/>
+        <Button Grid.Column="0" Grid.Row="1" Content="Medicines" Width="100" VerticalAlignment="Center" Click="Button_Medicines"/>
+        <Button Grid.Column="0" Grid.Row="2" Content="Patients" Width="100" VerticalAlignment="Center" Click="Button_Patients"/>
+        <Button Grid.Column="0" Grid.Row="3" Content="Institution" Width="100" VerticalAlignment="Center" Click="Button_Institution"/>
         <Frame Grid.Column="1" Grid.Row="0" Grid.RowSpan="4" x:Name="frame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

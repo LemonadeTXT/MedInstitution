@@ -8,6 +8,7 @@ namespace MedInstitution.DAL
         public DbSet<Institution> Institutions { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Patient> Patients { get; set; }
+        public DbSet<Medicine> Medicines { get; set; }
 
         public DataContext()
         {

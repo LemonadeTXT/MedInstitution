@@ -1,28 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MedInstitution.Models;
+using MedInstitution.Services;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace MedInstitution.Pages
 {
-    /// <summary>
-    /// Interaction logic for MedicinesPage.xaml
-    /// </summary>
     public partial class MedicinesPage : Page
     {
+        private MedicineService _medicineService;
+
         public MedicinesPage()
         {
+            _medicineService = new MedicineService();
+
             InitializeComponent();
+
+            dataGrid.ItemsSource = _medicineService.GetAllMedicines();
+        }
+
+        private void Button_Add(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AddMedicinePage());
+        }
+
+        private void Button_Edit(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new EditMedicinePage((Medicine)dataGrid.SelectedItem));
+        }
+
+        private void Button_Delete(object sender, RoutedEventArgs e)
+        {
+            _medicineService.DeleteMedicines(dataGrid.SelectedItems.OfType<Medicine>().ToList());
+
+            dataGrid.ItemsSource = _medicineService.GetAllMedicines();
         }
     }
 }

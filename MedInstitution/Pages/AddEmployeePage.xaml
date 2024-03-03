@@ -10,15 +10,26 @@
       Background="White">
 
     <Grid>
-        <Label Content="First Name" HorizontalAlignment="Left" Margin="102,87,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textboxFirstName" HorizontalAlignment="Left" Margin="217,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Last Name" HorizontalAlignment="Left" Margin="102,116,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textboxLastName" HorizontalAlignment="Left" Margin="217,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Job Title" HorizontalAlignment="Left" Margin="102,162,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboboxJobTitle" HorizontalAlignment="Left" Margin="217,157,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Birthday" HorizontalAlignment="Left" Margin="102,0,0,0" VerticalAlignment="Center"/>
-        <DatePicker x:Name="datepickerBirthday" HorizontalAlignment="Left" Margin="217,0,0,0" Width="120"/>
-        <Button Content="Back" HorizontalAlignment="Left" Margin="102,350,0,0" VerticalAlignment="Top" Click="Button_Back"/>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="262,350,0,0" VerticalAlignment="Top" Click="Button_Add"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" Content="First Name" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,30,0"/>
+        <TextBox Grid.Column="1" Grid.Row="0" x:Name="textboxFirstName" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Margin="10,0,0,0"/>
+        <Label Grid.Column="0" Grid.Row="1" Content="Last Name" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,30,0"/>
+        <TextBox Grid.Column="1" Grid.Row="1" x:Name="textboxLastName" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Margin="10,0,0,0"/>
+        <Label Grid.Column="0" Grid.Row="2" Content="Job Title" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,30,0"/>
+        <ComboBox Grid.Column="1" Grid.Row="2" x:Name="comboboxJobTitle" HorizontalAlignment="Left" VerticalAlignment="Center" Width="120" Margin="10,0,0,0"/>
+        <Label Grid.Column="0" Grid.Row="3" Content="Birthday" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,30,0"/>
+        <DatePicker Grid.Column="1" Grid.Row="3" x:Name="datepickerBirthday" HorizontalAlignment="Left" VerticalAlignment="Center" Width="120" Margin="10,0,0,0"/>
+        <Button Grid.Column="0" Grid.Row="4" Content="Back" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0" Click="Button_Back"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Click="Button_Add"/>
     </Grid>
 </Page>

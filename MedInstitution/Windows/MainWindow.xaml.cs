@@ -14,5 +14,20 @@ namespace MedInstitution.Windows
         {
             frame.Navigate(new EmployeesPage());
         }
+
+        private void Button_Medicines(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(new MedicinesPage());
+        }
+
+        private void Button_Patients(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Institution(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
